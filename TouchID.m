@@ -1,6 +1,16 @@
 #import "TouchID.h"
+
+#if __has_include(<React/RCTUtils.h>)
 #import <React/RCTUtils.h>
+#else
+#import "RCTUtils.h"
+#endif
+
+#if __has_include(<LocalAuthentication/LocalAuthentication.h>)
 #import <LocalAuthentication/LocalAuthentication.h>
+#else
+#import "LocalAuthentication.h"
+#endif
 
 @implementation TouchID
 
